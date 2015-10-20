@@ -21,7 +21,7 @@ module SimpleBdd
         send method_name
       else
         unless RSpec.configuration.raise_error_on_missing_step_implementation?
-          pending(method_name)
+          skip(method_name)
         end
         raise StepNotImplemented, method_name
       end
